@@ -1,0 +1,381 @@
+body
+{
+   margin : 0; 
+   overflow : hidden;
+}
+
+*{
+    box-sizing : border-box; 
+ }
+
+.container
+{
+    height : 100vh;
+    position: relative;
+    
+}
+
+.title-bar
+{
+    height:5vh;
+    background-color: #107c41;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+ 
+}
+.menu-bar
+{
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    color: white;
+   
+}
+
+.menu-item
+{
+    padding-left : 10px;
+    padding-right : 10px;
+    display:flex;
+    align-items : center;
+    font-size: 18;
+}
+
+.menu-item.selected
+{
+    background-color: #fff;
+    color: green;
+}
+
+.menu-item:hover
+{
+    background-color:#0c5e31;
+    cursor: pointer;
+}
+.menu-item.selected:hover
+{
+    background-color: #fff;
+    cursor:default;
+}
+.menu-icon-bar
+{
+   height : 6vh;
+   background-color: rgb(243, 242, 242);
+   display: flex;
+   align-items:center;
+   
+   
+}
+.menu-icon
+{
+    padding-left: 10px;
+    padding-right: 10px; 
+    display: flex;
+    align-items: center;
+}
+.font-family-selector
+{
+   
+    width: 150px;
+    font-family: Noto Sans;
+}
+
+.selector
+{
+    height: 30px;
+    font-size: 16px;
+}
+.selector option
+{
+    font-size:20px;
+}
+.menu-icon:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+
+.formula-bar
+{
+   height : 5vh; 
+   display:flex;
+   align-items: center;
+   padding-left:0.7rem;
+    padding-right:0.7rem;
+    background-color: rgb(241,241,241);
+}
+
+.data-container
+{
+   height: 75vh;
+   display: flex;
+   flex-wrap: wrap;
+   
+}
+
+.select-all
+{
+    height: 30px;
+    width: 30px;
+    border: 1px solid lightgray;
+}
+.column-name-container
+{
+   width: calc(100vw - 30px);
+   height: 30px;
+   border: 1px solid lightgray;
+   display: flex;
+   overflow: hidden;
+}
+.row-name-container
+{
+   height: calc(75vh - 30px);
+   width: 30px;
+   border: 1px solid lightgray;
+   overflow: hidden;
+   
+}
+.input-cell-container
+{
+    height: calc(75vh - 30px);
+    width: calc(100vw - 30px);
+    border: 1px solid lightgray;
+    overflow: scroll;
+}
+.sheet-bar
+{
+height: 4vh;
+  display:flex; 
+  align-items: center;
+}
+.scroller
+{
+    display: flex;
+    align-items: center;
+    width: 70px;
+}
+.icon-left-scroll ,.icon-right-scroll
+{
+    height: 30px;   
+}
+
+.icon-left-scroll:hover ,.icon-right-scroll:hover
+{
+   cursor: pointer;
+   background-color: lightgray;
+   transform: scale(1.2);
+}
+.icon-add{
+   color: #107c41;
+   width: 40px;
+}
+.icon-add:hover
+{
+   cursor: pointer;
+   transform: scale(1.2);
+}
+.sheet-tab-container
+{
+    border: 1px solid lightgray;
+    width: calc(100vw - 110px);
+    display: flex;
+}
+.sheet-tab
+{
+
+    padding-left:10px;
+    padding-right:10px;
+    width: 80px;
+    border-right: 1px solid lightgray;
+    text-align:center;
+    font-weight: 600;
+}
+.sheet-tab.selected{
+    border-bottom: 4px solid #046b33;
+}
+.sheet-tab:hover
+{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.sheet-tab.selected:hover
+{
+    cursor: default;
+    background-color: #ffffff;
+}
+.column-name
+{
+   
+   min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-right: 1px solid lightgray;
+    font-weight: bold;
+}
+
+.row-name
+{
+   min-height: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+}
+
+.cell-row
+{
+    display:flex;
+}
+.input-cell
+{
+    min-width:100px;
+    min-height:25px;
+    border-right:1px solid lightgray;
+    border-bottom:1px solid lightgray;
+    outline-color: #107c41;
+    cursor: default;
+    font-family:Noto Sans;
+    font-size: 14px;
+}
+.input-cell.selected
+{
+    border: 2px solid #107c41;
+}
+
+.formula-sign
+{
+    height: 70%;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formula-editor
+{
+    height: 70%;
+    border:1px solid lightgray;
+    background-color: #fff;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    align-items:center;
+}
+.selected-cell
+{
+    width: 120px;
+}
+.formula-input
+{
+    width: calc(100vw - 160px);
+    outline-color: #107c41;
+}
+
+.menu-icon.selected
+{
+    background-color: lightgray;
+}
+
+.input-cell.top-cell-selected
+{
+    border-top:none;
+}
+
+.input-cell.bottom-cell-selected
+{
+    border-bottom:1px solid lightgray;
+}
+
+.input-cell.right-cell-selected
+{
+    border-right: 1px solid lightgray;
+}
+
+.input-cell.left-cell-selected
+{
+    border-left: none;
+}
+.color-picker
+{
+    /*An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+    position: absolute;
+    width: 26px;
+    height: 4px;
+    border: none;
+    padding :0;
+    cursor: pointer;
+    top: 20px;
+    left: 9px;
+}
+.icon-color-fill,.icon-color-text{
+    position: relative;
+}
+.sheet-options-modal
+{
+    position:absolute;
+    bottom: 8vh;
+    background-color: #ffffff;
+    height: 30px;
+    width: 60px;
+    left: 100px;
+    
+}
+.sheet-rename,.sheet-delete
+{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 3px 3px lightgray;
+}
+.sheet-rename:hover,.sheet-delete:hover
+{
+    background-color: lightgray;
+    cursor:pointer;
+}
+.sheet-rename-modal {
+    position: absolute;
+     height: 180px;
+    width: 300px;
+    top: calc(100vh / 2 - 90px);
+    left: calc(100vw / 2 - 150px);
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 3px 1px lightgray; 
+}
+.action-buttons
+{
+    display: flex;
+     /* to provide space between two words */
+    justify-content :space-evenly;
+    margin-top: 15px;
+     margin-bottom: 15px; 
+
+}
+
+.modal-title
+{
+    font-size: 20px;
+}
+.new-sheet-name
+{
+    height: 26px;
+    font-size: 18px;
+    outline-color :  #107c41;
+    
+}
+.submit-button
+{
+    cursor: pointer;
+    background-color: green;
+    padding: 8px;
+}
+.cancel-button
+{
+    cursor: pointer;
+    background-color: lightgray;
+    padding: 8px;
+}
